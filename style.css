@@ -1,0 +1,72 @@
+body {
+    font-family: 'Roboto Mono', monospace;
+}
+
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+.nav-link:hover {
+    color: #00ff00; /* Green for hover */
+    transition: color 0.3s ease;
+}
+
+.project-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 255, 0, 0.2); /* Green shadow */
+}
+
+.navbar-scrolled {
+    background-color: rgba(31, 41, 55, 0.95);
+    box-shadow: 0 2px 5px rgba(0, 255, 0, 0.1); /* Green shadow */
+}
+
+/* Custom neon colors */
+.text-neon-green {
+    color: #00ff00; /* Bright green for text */
+}
+
+.bg-neon-green {
+    background: rgba(0, 255, 0, 0.5); /* Fallback semi-transparent green */
+    background: linear-gradient(to right, rgba(0, 255, 0, 0.5), rgba(0, 204, 0, 0.5)); /* Semi-transparent green gradient */
+    border: 1px solid rgba(51, 255, 51, 0.7); /* Semi-transparent green border */
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5); /* Green glow */
+}
+
+/* Ensure specificity for skill bars */
+.skill-bar .skill-progress.bg-neon-green {
+    background: rgba(0, 255, 0, 0.5); /* Fallback semi-transparent green */
+    background: linear-gradient(to right, rgba(0, 255, 0, 0.5), rgba(0, 204, 0, 0.5)); /* Semi-transparent green gradient */
+    border: 1px solid rgba(51, 255, 51, 0.7);
+    box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.bg-neon-green-hover:hover {
+    background-color: rgba(0, 204, 0, 0.7); /* Slightly darker green on hover */
+}
+
+/* Skill bar animation */
+.skill-progress {
+    transition: width 1.5s ease-in-out;
+}
+
+/* Skill bar styling */
+.skill-bar .h-6 {
+    height: 1.5rem; /* Thicker bars */
+}
+
+/* Fade-in animation for sections */
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}

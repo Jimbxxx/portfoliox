@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jimbo - Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-900 text-gray-100 smooth-scroll">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed top-0 w-full bg-gray-800 shadow-lg z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="text-2xl font-bold text-neon-green">Jimbo's Portfolio</div>
+                <div class="flex space-x-8">
+                    <a href="#home" class="nav-link font-semibold text-gray-300 hover:text-neon-green">Home</a>
+                    <a href="#skills" class="nav-link font-semibold text-gray-300 hover:text-neon-green">Skills</a>
+                    <a href="#projects" class="nav-link font-semibold text-gray-300 hover:text-neon-green">Projects</a>
+                    <a href="#contact" class="nav-link font-semibold text-gray-300 hover:text-neon-green">Contact</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-gray-900 to-gray-700 text-center relative overflow-hidden">
+        <canvas id="particles" class="absolute inset-0 z-0"></canvas>
+        <div class="max-w-4xl mx-auto px-4 z-10">
+            <img src="images/Avatar.gif" alt="Jimbo's Avatar" class="w-32 h-32 rounded-full mx-auto mb-6 border-2 border-neon-green">
+            <h1 class="text-5xl font-bold mb-4 text-neon-green">Hi, I'm Jimbo!</h1>
+            <p class="text-xl mb-6 text-gray-300">An Experienced Discord Bot developer and Web Developer!<span id="typing-text" class="font-semibold text-neon-green"></span></p>
+            <a href="#projects" class="bg-neon-green text-gray-900 px-6 py-3 rounded-full font-semibold hover:bg-neon-green-hover transition transform hover:scale-105">Explore My Work</a>
+            <div class="mt-6 flex justify-center space-x-6">
+                <a href="#" class="text-gray-300 hover:text-neon-green transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.22-1.79L9 14v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1h-6v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg></a>
+                <a href="#" class="text-gray-300 hover:text-neon-green transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.5 7.09c0 .32-.03.64-.08.95-.22 2.09-1.97 4.67-4.44 5.36-.74.21-1.51.29-2.28.22-.49-.04-.97-.19-1.41-.43-.27-.15-.52-.33-.74-.54l-.06-.06c-.04-.04-.08-.09-.11-.14-.03-.05-.06-.1-.08-.16l-.02-.06c-.01-.04-.02-.09-.03-.14l-.01-.07v-.07c0-.05.01-.1.02-.15.02-.06.05-.12.09-.17.04-.05.08-.1.13-.14l-.06-.06c-.22-.21-.47-.39-.74-.54-.44-.24-.92-.39-1.41-.43-.77-.07-1.54.01-2.28.22.81.23 1.57.67 2.23 1.25.66-.58 1.42-1.02 2.23-1.25.74-.21 1.51-.29 2.28-.22.49.04.97.19 1.41.43.27.15.52.33.74.54l.06.06c.04.04.08.09.11.14.03.05.06.1.08.16l.02.06c.01.04.02.09.03.14l.01.07v.07c0 .05-.01.1-.02.15-.02.06-.05-.12-.09-.17-.04-.05-.08-.1-.13-.14l-.06-.06c-.22-.21-.47-.39-.74-.54-.44-.24-.92-.39-1.41-.43-.77-.07-1.54.01-2.28-.22-2.47-.69-4.22-3.27-4.44-5.36-.05-.31-.08-.63-.08-.95 0-3.31 2.69-6 6-6s6 2.69 6 6z"/></svg></a>
+                <a href="#" class="text-gray-300 hover:text-neon-green transition"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15.5h-1v-5h2v5zm0-6h-1V7h1v4.5zm4 6h-1v-2.5h-2v-2h2V9.5h1v8z"/></svg></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-neon-green">My Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-100">Discord Bot Development</h3>
+                    <div class="skill-bar">
+                        <p class="text-gray-300 mb-2">Python</p>
+                        <div class="w-full bg-gray-700 rounded-full h-6 overflow-hidden">
+                            <div class="skill-progress bg-neon-green h-6 rounded-full" style="width: 0%" data-width="100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar mt-4">
+                        <p class="text-gray-300 mb-2">Discord.py</p>
+                        <div class="w-full bg-gray-700 rounded-full h-6 overflow-hidden">
+                            <div class="skill-progress bg-neon-green h-6 rounded-full" style="width: 0%" data-width="100%"></div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold mb-4 text-gray-100">Web Development</h3>
+                    <div class="skill-bar">
+                        <p class="text-gray-300 mb-2">HTML/CSS/JavaScript</p>
+                        <div class="w-full bg-gray-700 rounded-full h-6 overflow-hidden">
+                            <div class="skill-progress bg-neon-green h-6 rounded-full" style="width: 0%" data-width="100%"></div>
+                        </div>
+                    </div>
+                    <div class="skill-bar mt-4">
+                        <p class="text-gray-300 mb-2">Lua</p>
+                        <div class="w-full bg-gray-700 rounded-full h-6 overflow-hidden">
+                            <div class="skill-progress bg-neon-green h-6 rounded-full" style="width: 0%" data-width="100%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-neon-green">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/SelfBot.png" alt="Discord SelfBot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-100">Discord Self Bot</h3>
+                        <p class="text-gray-400 mb-4">A Discord selfbot automates user account actions, enhancing personal experience.</p>
+                        <a href="#" class="text-neon-green font-semibold hover:underline">View on GitHub</a>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <img src="https://via.placeholder.com/400x200" alt="Web App" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-100">Portfolio Website</h3>
+                        <p class="text-gray-400 mb-4">This is what you are currently viewing. A responsive combination of HTML, CSS and JS</p>
+                        <a href="#" class="text-neon-green font-semibold hover:underline">Live Demo</a>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="project-card bg-gray-800 rounded-lg shadow-lg overflow-hidden">
+                    <img src="images/UtilBot.png" alt="Fun Bot" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-100">Discord Utility Bot</h3>
+                        <p class="text-gray-400 mb-4">Utility Bot with over 20 useful commands for server</p>
+                        <a href="utilitybot.html" class="text-neon-green font-semibold hover:underline">Watch Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center mb-12 text-neon-green">Get in Touch</h2>
+            <div class="max-w-lg mx-auto">
+                <div id="contact-form" class="space-y-4">
+                    <input type="text" id="name" placeholder="Your Name" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-gray-100 focus:outline-none focus:ring-2 focus:ring-neon-green">
+                    <input type="email" id="email" placeholder="Your Email" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-gray-100 focus:outline-none focus:ring-2 focus:ring-neon-green">
+                    <textarea id="message" placeholder="Your Message" rows="5" class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg text-gray-100 focus:outline-none focus:ring-2 focus:ring-neon-green"></textarea>
+                    <button id="contact-btn" class="w-full bg-neon-green text-gray-900 px-6 py-3 rounded-lg font-semibold hover:bg-neon-green-hover transition">Send Message</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-6">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>© 2025 Jayme. All rights reserved.</p>
+            <div class="mt-4 flex justify-center space-x-6">
+                <a href="#" class="hover:text-neon-green">Discord</a>
+                <a href="#" class="hover:text-neon-green">GitGithub</a>
+                <a href="#" class="hover:text-neon-green">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

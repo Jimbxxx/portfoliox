@@ -1,1 +1,109 @@
-(function(){var _0xabc123=function(_0xdef456){var _0xghi789=['addEventListener','querySelectorAll','forEach','preventDefault','getAttribute','substring','getElementById','scrollIntoView','scrollY','classList','add','remove','style','width','isIntersecting','target','unobserve','observe','reset','error','toISOString','stringify','ok','value','trim'];return _0xghi789[_0xdef456];};document[_0xabc123('0x0')]('DOMContentLoaded',function(){var _0xdef456=document[_0xabc123('0x1')]('.nav-link');_0xdef456[_0xabc123('0x2')](_0xghi789=>{_0xghi789[_0xabc123('0x0')]('click',function(_0xjkl012){_0xjkl012[_0xabc123('0x3')]();var _0xmno345=this[_0xabc123('0x4')]('href')[_0xabc123('0x5')](1),_0xpqr678=document[_0xabc123('0x6')](_0xmno345);_0xpqr678[_0xabc123('0x7')]({behavior:'smooth'});});});var _0xstu901=window;_0xstu901[_0xabc123('0x0')]('scroll',function(){var _0xvwx234=document[_0xabc123('0x6')]('navbar');if(_0xstu901[_0xabc123('0x8')]>50){_0xvwx234[_0xabc123('0x9')][_0xabc123('0xa')]('navbar-scrolled');}else{_0xvwx234[_0xabc123('0x9')][_0xabc123('0xb')]('navbar-scrolled');}});var _0xyza567=document[_0xabc123('0x1')]('.skill-progress'),_0xabc890=document[_0xabc123('0x6')]('skills'),_0xdef123=()=>{_0xyza567[_0xabc123('0x2')](_0xghi456=>{var _0xjkl789=_0xghi456[_0xabc123('0x4')]('data-width');_0xghi456[_0xabc123('0xc')][_0xabc123('0xd')]=_0xjkl789;});};if(_0xabc890){var _0xmno012=new IntersectionObserver((_0xpqr345)=>{_0xpqr345[_0xabc123('0x2')](_0xvwx901=>{if(_0xvwx901[_0xabc123('0xf')]){_0xdef123();_0xmno012[_0xabc123('0x10')](_0xabc890);}});},{threshold:0.3});_0xmno012[_0xabc123('0x11')](_0xabc890);setTimeout(()=>{if(_0xyza567[0]&&_0xyza567[0][_0xabc123('0xc')][_0xabc123('0xd')]=='0%'){_0xdef123();}},5000);}var _0xyza123=document[_0xabc123('0x1')]('section'),_0xabc456=new IntersectionObserver((_0xdef789)=>{_0xdef789[_0xabc123('0x2')](_0xghi012=>{if(_0xghi012[_0xabc123('0xf')]){_0xghi012[_0xabc123('0x12')][_0xabc123('0xa')]('visible');}});},{threshold:0.1});_0xyza123[_0xabc123('0x2')](_0xjkl456=>{_0xabc456[_0xabc123('0x11')](_0xjkl456);});var _0xmno789=document[_0xabc123('0x6')]('contact-form'),_0xpqr012=document[_0xabc123('0x6')]('contact-btn');if(_0xmno789&&_0xpqr012){_0xpqr012[_0xabc123('0x0')]('click',async function(_0xstu345){_0xstu345[_0xabc123('0x3')]();var _0xvwx678=document[_0xabc123('0x6')]('name')[_0xabc123('0x13')][_0xabc123('0x14')](),_0xyza901=document[_0xabc123('0x6')]('email')[_0xabc123('0x13')][_0xabc123('0x14')](),_0xabc234=document[_0xabc123('0x6')]('message')[_0xabc123('0x13')][_0xabc123('0x14')]();if(!_0xvwx678||!_0xyza901||!_0xabc234){alert('Please fill out all fields.');return;}var _0xdef567=atob('aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTM5NzI0Mjg0MDU1MDk5ODEwNy9XWmpYa1JrY2JLd3FSNUNWZkU1TXdQclhnQVpLanh4T3pnRGQwQVlmMXZmY05KRDdvelJwQnEzcjFLazhfaG5pMFZqaw=='),_0xghi890={embeds:[{title:'New Contact Form Submission',color:0x00ff00,fields:[{name:'Name',value:_0xvwx678,inline:!0},{name:'Email',value:_0xyza901,inline:!0},{name:'Message',value:_0xabc234,inline:!1}],timestamp:new Date()[_0xabc123('0x15')]()}]};try{var _0xjkl123=await fetch(_0xdef567,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON[_0xabc123('0x16')](_0xghi890)});if(_0xjkl123[_0xabc123('0x17')]){alert('Message sent successfully!');_0xmno789[_0xabc123('0x18')]();}else{alert('Failed to send message. Please try again later.');}}catch(_0xpqr456){console[_0xabc123('0x19')]('Error sending webhook:',_0xpqr456);alert('An error occurred. Please try again later.');}});}});});})();
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.nav-link').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    window.addEventListener('scroll', function () {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('navbar-scrolled');
+        } else {
+            navbar.classList.remove('navbar-scrolled');
+        }
+    });
+
+    const skillBars = document.querySelectorAll('.skill-progress');
+    const skillsSection = document.getElementById('skills');
+    const animateSkillBars = () => {
+        skillBars.forEach(bar => {
+            const targetWidth = bar.getAttribute('data-width');
+            bar.style.width = targetWidth;
+        });
+    };
+
+    if (skillsSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkillBars();
+                    observer.unobserve(skillsSection);
+                }
+            });
+        }, { threshold: 0.3 });
+
+        observer.observe(skillsSection);
+
+        setTimeout(() => {
+            if (skillBars[0] && skillBars[0].style.width === '0%') {
+                animateSkillBars();
+            }
+        }, 5000);
+    }
+
+    const sections = document.querySelectorAll('section');
+    const sectionObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+            }
+        });
+    }, { threshold: 0.1 });
+
+    sections.forEach(section => {
+        sectionObserver.observe(section);
+    });
+
+    const contactForm = document.getElementById('contact-form');
+    const contactBtn = document.getElementById('contact-btn');
+    if (contactForm && contactBtn) {
+        contactBtn.addEventListener('click', async function (e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !message) {
+                alert('Please fill out all fields.');
+                return;
+            }
+
+            const webhookUrl = atob('aHR0cHM6Ly9kaXNjb3JkLmNvbS9hcGkvd2ViaG9va3MvMTM5NzI0Mjg0MDU1MDk5ODEwNy9XWmpYa1JrY2JLd3FSNUNWZkU1TXdQclhnQVpLanh4T3pnRGQwQVlmMXZmY05KRDdvelJwQnEzcjFLazhfaG5pMFZqaw==');
+
+            const payload = {
+                embeds: [{
+                    title: 'New Contact Form Submission',
+                    color: 0x00ff00,
+                    fields: [
+                        { name: 'Name', value: name, inline: true },
+                        { name: 'Email', value: email, inline: true },
+                        { name: 'Message', value: message, inline: false }
+                    ],
+                    timestamp: new Date().toISOString()
+                }]
+            };
+
+            try {
+                const response = await fetch(webhookUrl, {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(payload)
+                });
+
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    contactForm.reset();
+                } else {
+                    alert('Failed to send message. Please try again later.');
+                }
+            } catch (error) {
+                console.error('Error sending webhook:', error);
+                alert('An error occurred. Please try again later.');
+            }
+        });
+    }
+});
